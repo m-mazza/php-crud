@@ -1,0 +1,18 @@
+/* font - familia montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* determinando background padrão com o rgh abaixo */
+body   {
+    background-color:rgb(248, 252, 255);
+}
+/* determinando que a font padrão do projeto será montserrat */
+* {
+    font-family: "Montserrat", sans-serif;
+}
+.main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
