@@ -16,7 +16,15 @@ $(document).ready(function() {
             data: data,
             success: function (response) {
                 alert(response)
-                location.reload()
+                if(action == 'insert'){
+                    $('#nome, #email, #telefone').val('');      
+                } else if(action == 'update'){
+                    window.location.href = 'read-user';
+                } else {
+                    $('.list-group #'+action+'').remove();
+                    location.reload();
+                }
+           
             }
         });
     };

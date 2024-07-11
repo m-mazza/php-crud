@@ -12,7 +12,7 @@
                     if ($resultLista->num_rows > 0) {
                         while($row = $resultLista->fetch_assoc()) {
                         ?>
-                        <li class="list-group-item">
+                        <li id="<?php echo$row['id']?>" class="list-group-item">
                             <div class="p-1">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="col-10">
