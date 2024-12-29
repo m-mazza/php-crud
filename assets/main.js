@@ -22,7 +22,10 @@ $(document).ready(function() {
                     window.location.href = 'read-user';
                 } else {
                     $('.list-group #'+action+'').remove();
-                    location.reload();
+                    var rowCount = $('.list-group .list-group-item').length;
+                    if(rowCount == '0'){
+                        location.reload();
+                    }
                 }
            
             }
