@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 
-    window.submitInfo = function(action){
-        
+    window.submitInfo = function (action) {
+
         let data = {
             action: action,
             id: $('#id').val(),
@@ -11,25 +11,33 @@ $(document).ready(function() {
             telefone: $('#telefone').val()
         };
         $.ajax({
-            type: "POST",
-            url: "function.php",
+            type: 'POST',
+            url: 'function.php',
             data: data,
-            success: function (response) {
-                alert(response)
+            success: function (response){          
+                alert(response);
                 if(action == 'insert'){
+<<<<<<< HEAD
                     $('#nome, #email, #telefone').val('');      
                 } else if(action == 'update'){
                     window.location.href = 'read-user';
                 } else {
                     $('.list-group #'+action+'').remove();
+=======
+                    $('#nome, #email, #telefone').val('');
+                }else if(action == 'update'){
+                    window.location.href = 'read-user.php';
+                }else {
+                    $('.list-group #'+action).remove();
+>>>>>>> 0a81cf9148b387f7f4729344ac372d05a70a95c4
                     var rowCount = $('.list-group .list-group-item').length;
                     if(rowCount == '0'){
                         location.reload();
                     }
                 }
-           
             }
         });
+
     };
 
 
